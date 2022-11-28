@@ -4,10 +4,8 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
 // Template of the README file
-const generateREADME = ({ title, description, usage, credits, license, git, screenshots }) =>
-    `
-# ${title}
-
+const generateREADME = ({ title, description, installation, usage, license, credits, tests, github, email, screenshots }) =>
+    `# ${title}
 ## Description
 ${description}
 
@@ -20,20 +18,29 @@ ${description}
   - [Screenshots](#screenshots)
 
 ---
+## Installation
+${installation}
+
+---
 ## Usage
 ${usage}
 
 ---
-## Credits
+## Contributing
 ${credits}
 
 ---
 ## License
 ${license}
 
+--- 
+## Tests
+${tests}
+
 ---
-## Links
-GitHub: ${git}
+## Questions
+GitHub Username: ${github}
+If you have any additional questions, please contact me at ${email}.
 
 ---
 ## Screenshots and Video
@@ -54,13 +61,13 @@ inquirer
         },
         {
             type: 'input',
-            name: 'usage',
-            message: 'Provide instructions and examples for use.',
+            name: 'installation',
+            message: 'Provide installation instructions.',
         },
         {
             type: 'input',
-            name: 'credits',
-            message: 'List collaborators, if any, with links to the GitHub profiles.',
+            name: 'usage',
+            message: 'Provide instructions and examples for use.',
         },
         {
             type: 'list',
@@ -70,13 +77,23 @@ inquirer
         },
         {
             type: 'input',
-            name: 'git',
+            name: 'credits',
+            message: 'List collaborators, if any, with links to the GitHub profiles.',
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Provide a sample of tests that can be performed with code examples.',
+        },
+        {
+            type: 'input',
+            name: 'github',
             message: 'Provide the link to the GitHub Repository.',
         },
         {
             type: 'input',
-            name: 'screenshots',
-            message: 'Provide the file name of the screenshot or video.',
+            name: 'email',
+            message: 'Provide your email address.',
         },
     ])
     // Creates the README file based on user's input
@@ -84,7 +101,7 @@ inquirer
         const readmeContent = generateREADME(answers);
 
         fs.writeFile('README.md', readmeContent, (err) =>
-            err ? console.log(err) : console.log('Successfully created README.md file!')
+            err ? console.log(err) : console.log('README is successfully created!')
         );
     });
 
