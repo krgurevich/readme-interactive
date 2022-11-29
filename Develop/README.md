@@ -1,35 +1,40 @@
-# Project 1
-Interactive App
+# README-Interactive
+Professional README Generator
 
 
+[![License:MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ---
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
-false
+- [Credits](#credits) 
+- [License](#license)
 - [Support](#github)
+
 
 ---
 ## Installation
-Node and its dependancies
+Requires use of Node.js v18 and inquirer@8.2.4.
 
 ---
 ## Usage
-Command Line
+This is a command-line application that dynamically generates a professional README.md file based on user's input using the inquirer package.  The application is invoked by using node index.js command.  Follow this link for installation steps of node.js: https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs
 
 ---
 ## Contributing
-Please contribute
+N/A
 
+---
+## License 
 
+To review the terms of the license, please see https://opensource.org/licenses/MIT
 
 ---
 ## Tests
-No tests available
+No testing documentation is provided
 
 ---
 ## Support
-GitHub Username: kgurevich
+GitHub Username: krgurevich
 
-For support, please email at k@support.com.
+For support, please email at kristina@support.com.

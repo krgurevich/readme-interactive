@@ -51,8 +51,7 @@ function renderLicenseSection(license) {
   if (license != "None") {
     licenseSection += "---\n";
     licenseSection += "## License \n";
-    licenseSection += (license);
-    licenseSection += "\nTo review the terms of this license, please see " + renderLicenseLink(license).licenseLink
+    licenseSection += "\nTo review the terms of the license, please see " + renderLicenseLink(license).licenseLink + "\n"
   }
   return licenseSection;
 }
@@ -61,15 +60,14 @@ function renderLicenseSection(license) {
 // Template of the README file
 const generateMarkdown = ({ title, description, installation, usage, license, credits, tests, github, email }) =>
   `# ${title}
-${description}
-${renderLicenseBadge(license, renderLicenseLink(license))}
+${description}\n
 
+${renderLicenseBadge(license, renderLicenseLink(license))}
 ---
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
-${license != "None" && "- [License](#license)"}
+- [Credits](#credits) ${license != "None" ? "\n- [License](#license)" : ""}
 - [Support](#github)
 
 
@@ -86,7 +84,6 @@ ${usage}
 ${credits}
 
 ${renderLicenseSection(license)}
-
 ---
 ## Tests
 ${tests}
