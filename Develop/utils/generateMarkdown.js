@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function that returns a license badge based on which license is passed in
+// If there is no license, returns an empty string
 function renderLicenseBadge(license, { licenseLink, licenseImage }) {
   let badge = "";
   if (license !== "None") {
@@ -8,8 +8,8 @@ function renderLicenseBadge(license, { licenseLink, licenseImage }) {
   return badge
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function that returns the license link
+// If there is no license, returns an empty string
 function renderLicenseLink(license) {
   let licenseLink = "";
   let licenseImage = "";
@@ -43,33 +43,35 @@ function renderLicenseLink(license) {
 
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function that returns the license section of README
+// If there is no license, returns an empty string
 function renderLicenseSection(license) {
   let licenseSection = "";
 
   if (license != "None") {
     licenseSection += "---\n";
     licenseSection += "## License \n";
-    licenseSection += "To review the terms of this license, please see " + renderLicenseLink(license).licenseLink
+    licenseSection += (license);
+    licenseSection += "\nTo review the terms of this license, please see " + renderLicenseLink(license).licenseLink
   }
   return licenseSection;
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
+// Template of the README file
 const generateMarkdown = ({ title, description, installation, usage, license, credits, tests, github, email }) =>
   `# ${title}
-## Description
 ${description}
 ${renderLicenseBadge(license, renderLicenseLink(license))}
 
 ---
-Table of Contents
+## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 ${license != "None" && "- [License](#license)"}
-- [GitHub](#questions)
+- [Support](#github)
+
 
 ---
 ## Installation
@@ -85,14 +87,14 @@ ${credits}
 
 ${renderLicenseSection(license)}
 
---- 
+---
 ## Tests
 ${tests}
 
 ---
-## Questions
-My GitHub Username: ${github}
-If you have any additional questions, please contact me at ${email}.
+## Support
+GitHub Username: ${github}\n
+For support, please email at ${email}.
 `;
 
 module.exports = generateMarkdown;

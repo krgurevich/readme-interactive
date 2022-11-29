@@ -3,8 +3,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
-
-// Template of the README file
 // Collects user's input to generate README content
 inquirer
     .prompt([
@@ -21,12 +19,12 @@ inquirer
         {
             type: 'input',
             name: 'installation',
-            message: 'Provide installation instructions -',
+            message: 'Provide installation requirements -',
         },
         {
             type: 'input',
             name: 'usage',
-            message: 'Provide instructions and examples for use -',
+            message: 'Detail project features and interface -',
         },
         {
             type: 'list',
@@ -42,7 +40,7 @@ inquirer
         {
             type: 'input',
             name: 'tests',
-            message: 'Provide a sample of tests that can be performed with code examples -',
+            message: 'Provide instructions on how to run all necessary tests -',
         },
         {
             type: 'input',
@@ -55,7 +53,7 @@ inquirer
             message: 'Provide your email address -',
         },
     ])
-    // Creates the README file based on user's input
+    // Generate the README file based on user's input
     .then((answers) => {
         const readmeContent = generateMarkdown(answers);
 
@@ -63,9 +61,3 @@ inquirer
             err ? console.log(err) : console.log('README is successfully created!')
         );
     });
-
-// TODO: Create a function to initialize app
-function init() { }
-
-// Function call to initialize app
-init();

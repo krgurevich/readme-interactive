@@ -1,37 +1,35 @@
-# My Project
-## Description
+# Project 1
 Interactive App
-[![License:Apache License 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 
 ---
-Table of Contents
+## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
-- [GitHub](#questions)
+false
+- [Support](#github)
 
 ---
 ## Installation
-Follow instructions
+Node and its dependancies
 
 ---
 ## Usage
-Examples
+Command Line
 
 ---
 ## Contributing
-N/A
+Please contribute
+
+
 
 ---
-## License 
-To review the terms of this license, please see https://www.apache.org/licenses/LICENSE-2.0
-
---- 
 ## Tests
-Test Results
+No tests available
 
 ---
-## Questions
-My GitHub Username: krigikk
-If you have any additional questions, please contact me at kaikei@gmail.com.
+## Support
+GitHub Username: kgurevich
+
+For support, please email at k@support.com.
