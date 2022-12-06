@@ -39,6 +39,7 @@ MIT License
 ## Links
 
 GitHub Repository: https://github.com/krgurevich/readme-interactive
+
 Google Drive Link: https://drive.google.com/file/d/1d35UhLovSGRMKco3eCHe6SZr6JfCU_Y5/view
 
 ## Screenshot
