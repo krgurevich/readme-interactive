@@ -58,7 +58,7 @@ function renderLicenseSection(license) {
 
 // Function to generate markdown for README
 // Template of the README file
-const generateMarkdown = ({ title, description, installation, usage, license, credits, tests, github, email }) =>
+const generateMarkdown = ({ title, description, installation, usage, license, credits, tests, support, email }) =>
   `# ${title}
 ${description}\n
 
@@ -68,7 +68,7 @@ ${renderLicenseBadge(license, renderLicenseLink(license))}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits) ${license != "None" ? "\n- [License](#license)" : ""}
-- [Support](#github)
+- [Support](#support)
 
 
 ---
@@ -80,7 +80,7 @@ ${installation}
 ${usage}
 
 ---
-## Contributing
+## Credits
 ${credits}
 
 ${renderLicenseSection(license)}
@@ -90,7 +90,7 @@ ${tests}
 
 ---
 ## Support
-GitHub Username: ${github}\n
+GitHub Username: ${support}\n
 For support, please email at ${email}.
 `;
 

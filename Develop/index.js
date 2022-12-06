@@ -44,7 +44,7 @@ inquirer
         },
         {
             type: 'input',
-            name: 'github',
+            name: 'support',
             message: 'Provide your GitHub username -',
         },
         {

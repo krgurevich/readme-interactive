@@ -9,19 +9,19 @@ Professional README Generator
 - [Usage](#usage)
 - [Credits](#credits) 
 - [License](#license)
-- [Support](#github)
+- [Support](#support)
 
 
 ---
 ## Installation
-Requires use of Node.js v18 and inquirer@8.2.4.
+Requires use of node.js v18 and inquirer@8.2.4.
 
 ---
 ## Usage
-This is a command-line application that dynamically generates a professional README.md file based on user's input using the inquirer package.  The application is invoked by using node index.js command.  Follow this link for installation steps of node.js: https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs
+This is a command-line application that dynamically generates a professional README.md file based on user's input. For installation steps of node.js, please visit https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs
 
 ---
-## Contributing
+## Credits
 N/A
 
 ---
